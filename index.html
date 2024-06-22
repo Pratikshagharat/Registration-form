@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <nav>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>   
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <button class="registerbtn"
+                        onclick="document.getElementById('register-form').style.display='block'"
+                        style="width:auto;">Register</button>
+                    </li>
+                </ul>
+                <div class="dropdown_menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <button class="registerbtn"
+                            onclick="document.getElementById('register-form').style.display='block'"
+                            style="width:auto;">Register</button>
+                        </li>
+                </div>
+            </nav>
+        </div>
+        <div class="container" id="register-form">
+            <div class="header">
+                <h2>Register</h2>
+            </div>
+            <form class="form" id="form">
+                <div class="form-holder">
+                    <div class="form-control">
+                        <label for="fullName"><i class="fa-solid fa-user"></i>Full Name</label>
+                        <input type="text" id="fullName" class="form-data"
+                        placeholder="Enter your full name" required autocomplete="off">
+                    </div>
+                    <div class="error" id="fullNameError"></div>  
+                </div>
+                <div class="form-holder">
+                    <div class="form-control">
+                        <label for="email"><i class="fa-solid fa-envelope"></i>Email</label>
+                        <input type="text" id="email" class="form-data" 
+                        placeholder="Enter your email" required autocomplete="off">    
+                    </div>
+                    <div class="error" id="emailError"></div> 
+                </div>
+                <div class="form-holder">
+                    <div class="form-control">
+                        <label for="mobile"><i class="fa-solid fa-phone"></i>Mobile Number</label>
+                        <input type="text" id="mobile" class="form-data"
+                        placeholder="Enter your mobile number" required autocomplete="off">
+                    </div>
+                    <div class="error" id="mobileError"></div>     
+                </div>
+                <div class="form-holder">
+                    <div class="form-control">
+                        <label for="password"><i class="fa-solid fa-lock"></i>Password</label>
+                        <input type="password" id="password" class="form-data" 
+                        placeholder="Enter your password" required autocomplete="off">
+                    </div>
+                    <div class="error" id="passwordError"></div>   
+                </div>
+                <div class="form-holder">
+                    <div class="form-control">
+                        <label for="confirmPassword"><i class="fa-solid fa-lock"></i>Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-data" 
+                        placeholder="Confirm your password" required autocomplete="off">
+                    </div>
+                    <div class="error" id="confirmPasswordError"></div>   
+                </div>
+                <div class="form-control">
+                   <label>Gender</label>
+                   <div class="radio-container">
+                        <label>
+                            <input type="radio" name="gender" value="male" required>Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" required>Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other" required>Other
+                        </label>   
+                   </div>
+                   <div id="genderError" class="error"></div>
+                </div>
+                <div class="form-holder">
+                    <div class="form-controlterms">
+                        <input type="checkbox" class="check-button" name="terms" id="terms" required>
+                        <label for="terms">I accept the <a href="#">terms and conditions</a></label>
+                    </div>
+                    <div id="termsError" class="error"></div>
+                </div>
+                <button class="formSubmit">
+                    <span>Submit</span>
+                </button>
+            </form>
+        </div>
+        <div class="footer">
+            <footer>
+                <div class="footer-content">
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
